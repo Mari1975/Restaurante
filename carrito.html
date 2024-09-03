@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></head>
+<body>
+    <!-- Menú de Navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/img/logo2.png" alt="Logo Empresa" />
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#categorias">Categorías</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+               <!-- <li><a href="carrito.html"></a></li>-->
+
+
+            </ul>
+           
+            <div class="hamburger" >
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+
+        
+    </header>
+    <!--<nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#categorias">Categorías</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+        </ul>
+    </nav>-->
+
+    <!-- Contenido del Carrito -->
+    <section id="carritoContent">
+        <h2>Carrito de Compras</h2>
+        <div class="cart-container">
+            <table id="cartTable">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="cartItems">
+                    <!-- Los productos del carrito se insertarán aquí -->
+                </tbody>
+            </table>
+            <div class="cart-total">
+                <h3>Total: $<span id="totalPrice">0</span></h3>
+                <button id="checkoutBtn">Finalizar Compra</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+
+
+    <script src="assets/js/carrito.js"></script>
+</body>
+</html>
