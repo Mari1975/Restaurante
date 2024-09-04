@@ -9,6 +9,9 @@
     <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <!-- Iconos de Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -19,57 +22,34 @@
                 <img src="assets/img/logo2.png" alt="Logo Empresa" /> 
             </div>
             <p>Doña Flor</p>
-
+            
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#categorias">Categorías</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i></a></li>
+                    
             </ul>
-           <!-- <div id="cart-icon">
-                <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
-            </div>-->
+           
             <div class="hamburger" >
                 <i class="fas fa-bars"></i>
             </div>
-        </nav>
-
-        
+            
+        </nav> <hr>  
     </header>
 
     <!-- Sección Inicio -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>¡Bienvenidos a Reparto de Comida Chilena! </h1>
+            <h1>¡Bienvenidos a Restaurant Doña Flor! </h1>
             <p>Disfruta de los mejores platos chilenos entregados directamente a tu puerta.</p>
             <a href="#categorias" class="btn">Ver Menú</a>
         </div>
     </section>
 
+    
     <!-- Sección Categorías -->
-    <!--<section id="categorias" class="categories">
-        <h2>Categorías</h2>
-        <div class="category-container">
-            <div class="category-card">
-                <img src="assets/img/comida1.jpeg" alt="Comida Tradicional" />
-                <h3>Comida Tradicional</h3>
-            </div>
-            <div class="category-card">
-                <img src="assets/img/comida2.jpeg" alt="Bebidas" />
-                <h3>Bebidas</h3>
-            </div>
-            <div class="category-card">
-                <img src="assets/img/comida3.jpeg" alt="Postres" />
-                <h3>Postres</h3>
-            </div>
-            <div class="category-card">
-                <img src="assets/img/comida4.jpeg" alt="Snacks" />
-                <h3>Snacks</h3>
-            </div>
-        </div>
-    </section>-->
-
-    <!-- Sección Categorías -->
-<section id="categorias" class="categories">
+<section id="categorias" class="categorias">
     <h2>Categorías</h2>
     <div class="category-container">
         <div class="category-card">
@@ -96,7 +76,7 @@
                 <h3>Snacks</h3>
             </a>
         </div>
-    </div>
+    </div> 
 </section>
 
 
@@ -117,7 +97,7 @@
                 <textarea id="message" name="message" rows="5" required></textarea>
             </div>
             <button type="submit" class="btn">Enviar</button>
-        </form>
+        </form> 
     </section>
 
     <!-- Modal de Confirmación -->

@@ -1,3 +1,5 @@
+<!-- carrito.html -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,10 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- Iconos de Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></head>
+</head>
 <body>
     <!-- Menú de Navegación -->
     <header>
@@ -21,34 +22,19 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html#categorias">Categorías</a></li>
                 <li><a href="index.html#contacto">Contacto</a></li>
-               <!-- <li><a href="carrito.html"></a></li>-->
-
-
+                <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
-           
-            <div class="hamburger" >
-                <i class="fas fa-bars"></i>
-            </div>
         </nav>
-
-        
     </header>
-    <!--<nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#categorias">Categorías</a></li>
-            <li><a href="index.html#contacto">Contacto</a></li>
-            <li><a href="carrito.html">Carrito</a></li>
-        </ul>
-    </nav>-->
 
     <!-- Contenido del Carrito -->
     <section id="carritoContent">
-        <h2>Carrito de Compras</h2>
+        <h2>Tus Compras</h2>
         <div class="cart-container">
             <table id="cartTable">
                 <thead>
                     <tr>
+                        <th>Imagen</th>
                         <th>Producto</th>
                         <th>Precio</th>
                         <th>Acción</th>
@@ -65,8 +51,6 @@
         </div>
     </section>
 
-    <script src="assets/js/script.js"></script>
     <script src="assets/js/carrito.js"></script>
-
 </body>
 </html>

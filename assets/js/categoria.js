@@ -49,10 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
             let card = document.createElement('div');
             card.className = 'card';
             card.innerHTML = `
-                <img src="${dish.image}" alt="${dish.name}">
+                <img src="${dish.image}" alt="${dish.name}"class="imagen-card">
                 <h3>${dish.name}</h3>
                 <p>Precio: $${dish.price}</p>
-                <button data-name="${dish.name}" data-price="${dish.price}">Agregar</button>
+                <button data-image="${dish.image}" data-name="${dish.name}" data-price="${dish.price}">Agregar</button>
             `;
             categoryCards.appendChild(card);
         });
@@ -61,12 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Funcionalidad de agregar al carrito
     document.querySelectorAll('.card button').forEach(button => {
         button.addEventListener('click', function() {
+            const image = this.getAttribute('data-image');
             const name = this.getAttribute('data-name');
             const price = parseInt(this.getAttribute('data-price'));
 
             // Guardar en el carrito (usando Local Storage o simplemente un array en el script)
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart.push({ name, price });
+            cart.push({image, name, price });
             localStorage.setItem('cart', JSON.stringify(cart));
 
             // Mostrar una alerta o notificación

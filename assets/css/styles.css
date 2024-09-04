@@ -9,12 +9,13 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: white;
+    background-color: #111063e0;
 }
 
 /* Colores temáticos */
 :root {
-    --rojo: #d52b1e; /* Rojo de la bandera chilena */
+    --rojo:#D32F2F; /* Rojo de la bandera chilena */
     --blanco: #ffffff;
     --azul: #0039a6; /* Azul de la bandera chilena */
     --gris-claro: #f4f4f4;
@@ -26,8 +27,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--azul);
-    padding: 1rem 2rem;
+    background-color: rgba(218, 27, 20, 0.719);
+    padding: 1rem 1rem;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -37,6 +38,8 @@ body {
     color: #ffffff;
     font-size: 2rem;
     margin-right: auto;
+    font-family:cursive;
+
 }
 
 .logo img {
@@ -46,6 +49,7 @@ body {
 .nav-links {
     list-style:none;
     display: flex;
+    font-size: 20px;
 }
 
 .nav-links li {
@@ -89,6 +93,7 @@ body {
 #inicio, #categorias, #contacto {
     padding: 50px 20px;
     text-align: center;
+
 }
  
 /* agregado para carrito categoria*/
@@ -102,6 +107,7 @@ body {
 
 table {
     width: 100%;
+    height: 50%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
@@ -120,8 +126,22 @@ th, td {
     margin-top: 20px;
 }
 
+
+
+.removeItemBtn{
+
+    background-color:#D32F2F;
+    color:white;
+    padding: 10px 20px;
+
+}
+
+.removeItemBtn:hover {
+    background-color: darkred;
+}
+
 #checkoutBtn {
-    background-color: red;
+    background-color: #D32F2F;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -142,6 +162,7 @@ th, td {
     align-items: center;
     justify-content: center;
     position: relative;
+    font-family: cursive;
 }
 
 .hero::before {
@@ -151,7 +172,6 @@ th, td {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 57, 166, 0.7); /* Superposición azul con opacidad */
 }
 
 .hero-content {
@@ -189,30 +209,34 @@ th, td {
 }
 
 /* Sección Categorías */
-.categories {
+
+.categorias {
     padding: 4rem 2rem;
-    background-color: var(--gris-claro);
     text-align: center;
 }
 
-.categories h2 {
+.categorias h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: var(--azul);
+    color: white;
+    text-align: center;
 }
 
 .category-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+
 }
 
 .category-card {
     background-color: var(--blanco);
-    border: 2px solid var(--azul);
+    padding: 1rem;
+    border: 2px solid rgb(19, 2, 2);
     border-radius: 10px;
-    width: 250px;
+    width: 300px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -226,48 +250,74 @@ th, td {
 .category-card h3 {
     padding: 1rem;
     color: var(--rojo);
+    text-align: center;
 }
 
 .category-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
+
+
+/*titulo categorias*/
+
+#categoriaContent h2{
+
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* Estilo para las imágenes dentro de las cards de subcategorias*/
+
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px;
+    gap: 30px; /* Espacio entre cards */
+    width: 100%;
+    justify-content: space-between;
 }
+ 
 
 .card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(31, 7, 7, 0.1);
+    overflow: hidden;
+    width: 200px; /* Ancho fijo para las cards */
     text-align: center;
-    width: 250px;
+    padding: 1rem;
+    background-color:white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .card img {
-    border-radius: 10px;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0; /* Solo bordes superiores redondeados */
 }
 
 .card h3 {
     margin: 10px 0;
     font-size: 1.2rem;
+    color: rgb(124, 120, 120);
 }
 
 .card p {
     margin: 5px 0;
     font-size: 1rem;
-    color: gray;
+    color: rgb(102, 97, 97);
 }
 
 .card button {
-    background-color: red;
+    background-color: rgb(236, 23, 23);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -278,10 +328,19 @@ th, td {
 .card button:hover {
     background-color: darkred;
 }
+/* styles.css */
+
+.cart-item-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 
 
 /* Sección Contacto */
-.contact {
+.contacto {
     padding: 4rem 2rem;
     background-color: var(--blanco);
     text-align: center;
@@ -290,7 +349,7 @@ th, td {
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: var(--azul);
+    color: white;
 }
 
 form {
@@ -306,7 +365,7 @@ form {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--gris-oscuro);
+    color: white;
 }
 
 .form-group input,
@@ -320,12 +379,12 @@ form {
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: var(--azul);
+    border-color: white;
     outline: none;
 }
 
 button[type="submit"] {
-    background-color: var(--azul);
+    background-color:red;
     color: var(--blanco);
     padding: 0.75rem 1.5rem;
     border: none;
@@ -336,7 +395,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #002e8a;
+    background-color: rgb(114, 32, 32);
 }
 
 /* Modal */
@@ -356,7 +415,7 @@ button[type="submit"]:hover {
     background-color: var(--blanco);
     margin: 15% auto;
     padding: 2rem;
-    border: 1px solid var(--azul);
+    border: 1px solid white;
     width: 80%;
     max-width: 500px;
     border-radius: 10px;
@@ -379,7 +438,7 @@ button[type="submit"]:hover {
 
 /* Pie de Página */
 footer {
-    background-color: var(--azul);
+    background-color:rgba(51, 39, 21, 0.719);
     color: var(--blanco);
     text-align: center;
     padding: 1rem;
@@ -416,7 +475,7 @@ footer {
         right: 0;
         height: 100vh;
         top: 0;
-        background-color: var(--azul);
+        background-color:brown;
         flex-direction: column;
         align-items: center;
         width: 50%;
